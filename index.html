@@ -12,14 +12,13 @@
             <img src="img/icon/logo-technomart.svg" width="110" height="18" alt="Логотип интернет-магазина Техномарт">
           </a>
         </div>
-        <form>
-          <button type="submit"></button>
+        <form class="search">
           <input type="text" placeholder="Поиск">
         </form>
         <a href="#">
-            <img src="img/icon/icon-bookmark.svg" width="14" height="16">Закладки</a>
+            <img src="img/icon/icon-bookmark.svg" width="14" height="16">Закладки:0</a>
         <a href="#">
-            <img src="img/icon/icon-cart.svg" width="15" height="15">Корзина</a>
+            <img src="img/icon/icon-cart.svg" width="15" height="15">Корзина:0</a>
         <a href="#">Оформить заказ</a>
       </div>
         <div class="middle-header">
@@ -32,10 +31,10 @@
               <span>г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</span>
           </div>
           <ul class="user-navigation">
-            <li class="login-link">
-              <a href="#"><img src="img/icon/icon-login-1.svg" width="20" height="17">Вход</a></li>
-            <li class="check-in-link">
-              <a href="#">Регистрация</a></li>
+            <li>
+              <a class="login-link" href="#"><img src="img/icon/icon-login-1.svg" width="20" height="17">Вход</a></li>
+            <li>
+              <a class="check-in-link" href="#">Регистрация</a></li>
           </ul>
         </div>
         <nav class="lower-header">
@@ -50,42 +49,43 @@
           </ul>
       </nav>
     </header>
+
     <main class="main-container">
       <section class="popular-offers">
-        <h2>Популярные разделы сайта</h2> 
+        <h2 class="visually-hidden">Популярные разделы сайта</h2> 
         <div class="offer-container">
           <div class="materials offer-cards">
            <span class="headline">Материалы</span>
-           <img src="img/icon/popular-offers/mat.svg" width="87" height="96">
+           <img src="img/icon/popular-offers/mat.svg" width="87" height="96" alt="">
             <a href="#" class="button">На любой вкус</a>
           </div>
           <div class="instruments offer-cards">
             <span class="headline">Инструмент</span>
-            <img src="img/icon/popular-offers/instr.svg" width="75" height="61">
+            <img src="img/icon/popular-offers/instr.svg" width="75" height="61" alt="">
             <a href="#" class="button">На все случаи</a>
           </div>
           <div class="eqipments offer-cards">
             <span class="headline">Техника</span>
-            <img src="img/icon/popular-offers/tech.svg" width="78" height="62">
+            <img src="img/icon/popular-offers/tech.svg" width="78" height="62" alt="">
             <a href="#" class="button">Для стройки</a>
           </div>
          <div class="drills slider-wrap">
             <span class="headline">Дрели</span>
             <span class="subtitle">Соседям на радость!</span>
-            <a href="#" class="red button">Открыть каталог</a>
+            <a href="#" class="button-red button">Открыть каталог</a>
             <div id="slider">
-              <div class="slide"><img src="img/content/slider-1/Layer_99.jpg" width="620" height="266"></div>
-              <div class="slide"><img src="img/content/slider-2/2-layers.png" width="620" height="266"></div>
+              <div class="slide"><img src="img/content/slider-1/Layer_99.jpg" width="620" height="266" alt="Рабочий сверлит стену дрелью"></div>
+              <div class="slide"><img src="img/content/slider-2/2-layers.png" width="620" height="266" alt="Рабочий сверлит стену перфоратором"></div>
             </div>
          </div>
           <div class="sale offer-cards">
             <span class="headline">Скидка 50%</span>
-            <img src="img/icon/popular-offers/sale.svg" width="59" height="72">
+            <img src="img/icon/popular-offers/sale.svg" width="59" height="72" alt="">
             <a href="#" class="button">На 350 товаров</a>
           </div>
            <div class="delivery offer-cards">
             <span class="headline">Доставка</span>
-            <img src="img/icon/popular-offers/tech.svg" width="78" height="63">
+            <img src="img/icon/popular-offers/tech.svg" width="78" height="63" alt="">
             <a href="#" class="button">Бесплатно</a>
           </div>
          </div>
@@ -93,7 +93,7 @@
       <section class="popular-products">
         <div class="container-title">
           <h2>Популярные товары:</h2>
-          <a href="#" class="red button">Все популярные товары</a>
+          <a href="#" class="button-red button">Все популярные товары</a>
         </div>
         <ul class="product-container">
           <li class="product-cards">
@@ -109,13 +109,13 @@
             <span class="product-price-new">15500 Р.</span>
           </li>
           <li class="product-cards">
-              <a href="#"><img src="img/content/perf/Perforator_3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000"></a> 
+              <a href="#"><img src="img/content/perf/Perforator_1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000"></a> 
               <h3>Перфоратор BOSCH<br>BFG 6000</h3>
               <span class="product-price-old">30500 Р.</span>
               <span class="product-price-new">25500 Р.</span>
           </li>
           <li class="product-cards">
-              <a href="#"><img src="img/content/perf/Perforator_4.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000"></a> 
+              <a href="#"><img src="img/content/perf/Perforator_2.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000"></a> 
               <h3>Перфоратор BOSCH<br>BFG 2000</h3>
               <span class="product-price-old"></span>
               <span class="product-price-new">12500 Р.</span>
@@ -125,7 +125,7 @@
       <section class="popular-manufacturer">
         <div class="container-title">
           <h2>Популярные производители:</h2>
-          <a href="#" class="red button">Все производители</a>
+          <a href="#" class="button-red button">Все производители</a>
         </div>
         <ul class="manufacturer">
           <li><a href="#"><img src="img/content/manufacturer/bosch.png" width="126" height="37" alt="BOSCH"></a></li>
@@ -144,16 +144,31 @@
           <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           <ul class="list-services">
-           <li><button type="button">Доставка</button></li> 
+           <li> <button type="button">Доставка</button></li> 
            <li><button type="button">Гарантия</button></li> 
            <li><button type="button">Кредит</button></li> 
           </ul>
-          <div class="description-services">
+          <div class="description-services delivery">
             <span>Доставка</span>
             <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
               Ведь мы неплохо заработаем,<br>поднимае его на ваш этаж!
             </p>
-            <img src="img/icon/popular-offers/delivery-car.png" width="468" height="261">
+            <img src="img/icon/popular-offers/delivery-car.png" width="468" height="261" alt="">
+          </div>
+          <div class="description-services garantee">
+            <span>Гарантия</span>
+            <p>Если купленный у нас товар поломается или заискрит, 
+              а также в случае пожара, спровоцированного его возгаранием,
+              вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. 
+              Дом уж восстановите как-нибудь сами.
+            </p>
+            <img src="img/icon/guarantee.svg" width="468" height="261" alt="">
+          </div>
+          <div class="description-services credit">
+            <span>Кредит</span>
+            <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
+            <img src="img/icon/credit.svg" width="468" height="261" alt="">
+            <a href="#"class="button-red button">Отправить заявку</a>
           </div>
         </div>
       </section>
@@ -172,15 +187,38 @@
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
           </ul>
-          <a href="#" class="red button">Подробнее о компании</a>
+          <a href="#" class="button-red button">Подробнее о компании</a>
         </div>
         <div class="about-company contacts">
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами,<br>
           заехав в наш офис:
           </p>
-          <img src="#" alt="Карта офиса по адреу: г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8">
-          <a href="#" class="red button">Заблудились? Напишите нам!</a>
+          <img src="img/content/map_min.jpg" width="300" height="158" alt="Карта офиса по адреу: г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8">
+          <a href="#" class="button-red button">Заблудились? Напишите нам!</a>
+          <section class="modal write-us">
+            <h2 class="visually-hidden">Форма отправки письма</h2>
+            <form class="write-us" action="https://echo.htmlacademy.ru" method="post">
+              <p class="write-us-item">
+                <label for="write-name">Ваше имя:</label>
+                <input id="write-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+              </p>
+              <p class="write-us-item">
+                <label for="write-e-mail">Ваш e-mail:</label>
+                <input id="write-e-mail" type="text" name="e-mail adress" value="" placeholder="email@example.com">
+              </p>
+              <p class="write-us-item"> 
+                <label for="write-letter">Текст письма:</label>
+                <input id="write-letter" type="text" name="text of the letter" value="" placeholder="В свободной форме">
+              </p>
+              <button class="button-red button" type="submit">Отправить</button>
+              <button class="modal-close"type="button" aria-label="Закрыть форму отправки письма"></button>
+            </form>
+          </section>
+          <section class="modal map">
+            <img src="img/content/map_max.jpg" width="940" height="447" alt="Карта офиса по адреу: г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8">
+            <button class="modal-close"type="button" aria-label="Закрыть карту"></button>
+          </section>
         </div>
       </section>
     </main>
