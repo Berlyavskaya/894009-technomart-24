@@ -80,22 +80,36 @@
                 </fieldset>
                 <fieldset>
                     <legend>Производители:</legend> 
-                    <ul class="manufacturer filter">
-                        <li><input type="checkbox" name="manufacturer" value="BOSCH" checked>BOSCH</li>
-                        <li><input type="checkbox" name="manufacturer" value="Interscol">Интерскол</li>
-                        <li><input type="checkbox" name="manufacturer" value="Makita" checked>Makita</li>
-                        <li><input type="checkbox" name="manufacturer" value="DeWolt">DeWolt</li>
-                        <li><input type="checkbox" name="manufacturer" value="HITACHI">HITACHI</li>
+                    <ul class="manufacturer-filter">
+                        <li><input class="visually-hidden filter-input" type="checkbox" name="BOSCH" id="checkbox-BOSCH" checked>
+                            <label for="checkbox-BOSCH">BOSCH</label>
+                        </li>
+                        <li><input class="visually-hidden filter-input" type="checkbox" name="Interscol" id="checkbox-Interscol">
+                            <label for="checkbox-Interscol">Интерскол</label>
+                        </li>
+                        <li><input class="visually-hidden filter-input" type="checkbox" name="Makita" id="checkbox-Makita" checked>
+                            <label for="checkbox-Makita">Makita</label>
+                        </li>
+                        <li><input class="visually-hidden filter-input" type="checkbox" name="DeWolt" id="checkbox-DeWolt">
+                            <label for="checkbox-DeWolt">DeWolt</label>
+                        </li>
+                        <li><input class="visually-hidden filter-input" type="checkbox" name="HITACHI" id="checkbox-HITACHI">
+                            <label for="checkbox-HITACHI">HITACHI</label>
+                        </li>
                     </ul>
                 </fieldset>
                 <fieldset>
                     <legend>Питание:</legend> 
-                    <ul class="power filter">
-                        <li><input type="radio" name="power" value="battery" checked>Аккумуляторные</li>
-                        <li><input type="radio" name="power" value="network">Сетевые</li>
+                    <ul class="power-filter">
+                        <li><input class="visually-hidden filter-input" type="radio" name="power" value="battery" id="radio-battery" checked>
+                            <label for="radio-battery">Аккумуляторные</label>
+                        </li>
+                        <li><input class="visually-hidden filter-input" type="radio" name="power" value="network" id="radio-network">
+                            <label for="radio-network">Сетевые</label>
+                        </li>
                     </ul>
                 </fieldset>
-                <button type="button">Показать</button>
+                <button type="submit">Показать</button>
             </form>
         </section>
         <section class="catalog">
