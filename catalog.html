@@ -9,48 +9,52 @@
 </head>
 <body>
     <header>
+      <div class="heder-wrap">  
         <div class="upper-header">
-            <div class="main-logo-box">
-                <a class="main-logo">
-                    <img src="img/icon/logo-technomart.svg" width="110" height="18" alt="Логотип интернет-магазина Техномарт">
-                </a>
-            </div>
-            <form class="search">
-                <input type="text" placeholder="Поиск">
-            </form>
-            <a href="#">
-                <img src="img/icon/icon-bookmark.svg" width="14" height="16" alt="">Закладки:0</a>
-            <a href="#">
-                <img src="img/icon/icon-cart.svg" width="15" height="15" alt="">Корзина:10</a>
-            <a href="#">Оформить заказ</a>
-        </div>
-        <div class="middle-header">
-            <div class="main-title">
-                <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-            </div>
-            <div class="contacts-header">
-                <a href="tel:+7812550555">+7 (812) 555-05-55</a>
-                <span>г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</span>
-            </div>
-            <form>
-                <input type="text" placeholder="Рафшан Джамшутович">
-            </form>
-            <ul class="user-navigation">
-                <li class="my-orders"><a href="#">Мои заказы</a></li>
-                <li class="personal-area"><a href="#">Личный кабинет</a></li>
-            </ul>
-        </div>
-            <nav class="lower-header">
-                 <ul>
-                    <li><a href="main.html">Главная</a></li>
-                    <li><a href="about-company.html">Компания</a></li>
-                    <li><a href="catalog.html">Каталог</a></li>
-                    <li><a href="news.html">Новости</a></li>
-                    <li><a href="special-offers.html">Спецпредложения</a></li>
-                    <li><a href="delivery.html">Доставка</a></li>
-                    <li><a href="contacts.html">Контакты</a></li>
-                </ul>
-            </nav>
+              <div class="main-logo-box">
+                  <a class="main-logo">
+                      <img src="img/icon/logo-technomart.svg" width="110" height="18" alt="Логотип интернет-магазина Техномарт">
+                  </a>
+              </div>
+              <form class="search">
+                  <input type="text" placeholder="Поиск">
+              </form>
+              <a href="#">
+                  <img src="img/icon/icon-bookmark.svg" width="14" height="16" alt="">Закладки:0</a>
+              <a href="#">
+                  <img src="img/icon/icon-cart.svg" width="15" height="15" alt="">Корзина:10</a>
+              <a href="#">Оформить заказ</a>
+          </div>
+          <div class="middle-header">
+              <div class="main-title">
+                  <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+              </div>
+              <div class="contacts-header">
+                  <a href="tel:+7812550555">+7 (812) 555-05-55</a>
+                  <span>г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</span>
+              </div>
+              <form class="user-form">
+                <a href="#" aria-label="Личный кабинет"></a>
+                  <input type="text" placeholder="Рафшан Джамшутович">
+                <a href="#" aria-label="Выход из аккаунта"></a>
+              </form>
+              <ul class="catalog-user-navigation">
+                  <li class="my-orders"><a href="#">Мои заказы</a></li>
+                  <li class="personal-area"><a href="#">Личный кабинет</a></li>
+              </ul>
+          </div>
+              <nav class="lower-header">
+                   <ul>
+                      <li><a href="main.html">Главная</a></li>
+                      <li><a href="about-company.html">Компания</a></li>
+                      <li><a href="catalog.html">Каталог</a></li>
+                      <li><a href="news.html">Новости</a></li>
+                      <li><a href="special-offers.html">Спецпредложения</a></li>
+                      <li><a href="delivery.html">Доставка</a></li>
+                      <li><a href="contacts.html">Контакты</a></li>
+                  </ul>
+              </nav>
+      </div>
     </header>
 
     <main class="main-container">
@@ -63,51 +67,61 @@
             <h2>Перфораторы</h2>
             <div class="sort">
                 <span>Сортировка:</span>
-                <ul>
+              <ul class="sort-list">
                     <li><a href="#">по цене</a></li>
                     <li><a href="#">по типу</a></li>
                     <li><a href="#">по функцоналу</a></li>
-                    <li><a href="#"><img src="img/icon/icon-up-dir.svg" alt="Сортировка вверх"></a></li>
-                    <li><a href="#"><img src="img/icon/icon-down-dir.svg" alt="Сортировка вниз"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
                 </ul>
             </div>
         <section class="filters">
             <form class="filter" action="https://echo.htmlacademy.ru" method="GET" >
                 <span class="sort">Фильтр:</span>
-                <fieldset>
-                    <legend>Цена:</legend>
-                    <input type="range" min="0" max="30000" step="100" value="0">
-                    <input type="text">
-                    <input type="text">
+              <fieldset class="filter-item">
+                  <legend>Цена:</legend>
+                      <div class="range-filter">
+                        <div class="range-controls">
+                          <div class="scale">
+                            <div class="bar" style="margin-left: 20%; width: 50 %"></div>
+                          </div>
+                          <div class="toggle toggle-min"></div>
+                          <div class="toggle toggle-max"></div>
+                        </div>
+                        <div class="price-controls">
+                          <label class="min-price"><input name="min-price" type="text" value="0"></label>
+                          <label class="max-price">-<input name="max-price" type="text" value="15000"></label>
+                        </div>
+                      </div>
                 </fieldset>
-                <fieldset>
+              <fieldset class="filter-item">
                     <legend>Производители:</legend> 
                     <ul class="manufacturer-filter">
                         <li><input class="visually-hidden filter-input" type="checkbox" name="BOSCH" id="checkbox-BOSCH" checked>
-                            <label for="checkbox-BOSCH">BOSCH</label>
+                          <label for="checkbox-BOSCH"><span></span>BOSCH</label>
                         </li>
                         <li><input class="visually-hidden filter-input" type="checkbox" name="Interscol" id="checkbox-Interscol">
-                            <label for="checkbox-Interscol">Интерскол</label>
+                          <label for="checkbox-Interscol"><span></span>Интерскол</label>
                         </li>
                         <li><input class="visually-hidden filter-input" type="checkbox" name="Makita" id="checkbox-Makita" checked>
-                            <label for="checkbox-Makita">Makita</label>
+                          <label for="checkbox-Makita"><span></span>Makita</label>
                         </li>
                         <li><input class="visually-hidden filter-input" type="checkbox" name="DeWolt" id="checkbox-DeWolt">
-                            <label for="checkbox-DeWolt">DeWolt</label>
+                          <label for="checkbox-DeWolt"><span></span>DeWolt</label>
                         </li>
                         <li><input class="visually-hidden filter-input" type="checkbox" name="HITACHI" id="checkbox-HITACHI">
-                            <label for="checkbox-HITACHI">HITACHI</label>
+                          <label for="checkbox-HITACHI"><span></span>HITACHI</label>
                         </li>
                     </ul>
                 </fieldset>
-                <fieldset>
+              <fieldset class="filter-item">
                     <legend>Питание:</legend> 
                     <ul class="power-filter">
                         <li><input class="visually-hidden filter-input" type="radio" name="power" value="battery" id="radio-battery" checked>
-                            <label for="radio-battery">Аккумуляторные</label>
+                          <label for="radio-battery"><span></span>Аккумуляторные</label>
                         </li>
                         <li><input class="visually-hidden filter-input" type="radio" name="power" value="network" id="radio-network">
-                            <label for="radio-network">Сетевые</label>
+                          <label for="radio-network"><span></span>Сетевые</label>
                         </li>
                     </ul>
                 </fieldset>
@@ -175,10 +189,7 @@
             <div class="modal-wrap">
                 <div class="upper-modal">
                 <button class="modal-close" type="button" aria-label="Закрыть окно сообщения"></button>
-                <p>
-                    <img src="img/icon/goods-in-cart.svg" width="66" height="66" alt="">
-                    Товар добавлен в корзину!
-                </p>
+                <p>Товар добавлен в корзину!</p>
                 </div>
                 <div class="lower-modal">
                     <a href="#" class="button-red button">Оформить заказ</a>
@@ -187,7 +198,6 @@
             </div>
         </section>
     </main>
-
     <footer>
         <div class="contacts-footer">
             <div class="main-logo-box">
@@ -220,12 +230,9 @@
                 +7 (812) 555-05-55
             </p>
             <ul class="social-network">
-                <li><a href="#">
-                    <img src="img/icon/vk-1.svg" width="41" height="42" alt="VK"></a></li> 
-                <li><a href="#">
-                    <img src="img/icon/f-1.svg" width="42" height="42" alt="Facebook"></a></li> 
-                <li><a href="#">
-                    <img src="img/icon/insta-1.svg" width="42" height="42" alt="Instagram"></a></li> 
+                <li><a class="social-vk" href="#" aria-label="Аккаунт Техномарт в Вконтакте"></a></li> 
+                <li><a class="social-fb" href="#" aria-label="Аккаунт Техномарт в Facebook"></a></li> 
+                <li><a class="social-inst" href="#" aria-label="Аккаунт Техномарт в Instagram"></a></li> 
             </ul>
             <p>Обратная связь:
                 <a href="#">mail@htmlacademy</a>
