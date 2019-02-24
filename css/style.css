@@ -516,11 +516,11 @@ button {
 }
 
 .range-controls .toggle {
-  width: 4px;
-  height: 4px;
+  width: 20px;
+  height: 20px;
   padding: 0;
   position: relative;
-  top: -10px;
+  top: -11px;
   border: 8px solid #ffffff;
   background-color: #ababab;
   box-shadow: 0 2px 1px 0 #cfcfcf;
@@ -532,8 +532,8 @@ button {
 }
 
 .range-controls .toggle-max {
-  left: 160px;
-  top: -30px;
+  left: 100px;
+  top: -11px;
 }
 .price-controls {
   font-size: 0;
