@@ -11,20 +11,20 @@
     <header>
       <div class="heder-wrap">  
         <div class="upper-header">
-              <div class="main-logo-box">
-                  <a class="main-logo">
-                      <img src="img/icon/logo-technomart.svg" width="110" height="18" alt="Логотип интернет-магазина Техномарт">
-                  </a>
-              </div>
-              <form class="search">
-                  <input type="text" placeholder="Поиск">
-              </form>
+            <div class="main-logo-box">
+                <a class="main-logo">
+                    <img src="img/icon/logo-technomart.svg" width="110" height="18" alt="Логотип интернет-магазина Техномарт">
+                </a>
+            </div>
+            <div class="search">
+                <input class="search" type="text" placeholder="Поиск">
+            </div>
               <a href="#">
                   <img src="img/icon/icon-bookmark.svg" width="14" height="16" alt="">Закладки:0</a>
               <a href="#">
                   <img src="img/icon/icon-cart.svg" width="15" height="15" alt="">Корзина:10</a>
               <a href="#">Оформить заказ</a>
-          </div>
+        </div>
           <div class="middle-header">
               <div class="main-title">
                   <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
@@ -68,11 +68,11 @@
             <div class="sort">
                 <span>Сортировка:</span>
               <ul class="sort-list">
-                    <li><a href="#">по цене</a></li>
-                    <li><a href="#">по типу</a></li>
-                    <li><a href="#">по функцоналу</a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
+                    <li><a href="#" aria-label="Сортировка по цене">по цене</a></li>
+                    <li><a href="#" aria-label="Сортировка по типу">по типу</a></li>
+                    <li><a href="#" aria-label="Сортировка по функционалу">по функцоналу</a></li>
+                    <li><a href="#" aria-label="Сортировка снизу вверх"></a></li>
+                    <li><a href="#" aria-label="Сортировка сверху вниз"></a></li>
                 </ul>
             </div>
         <section class="filters">
@@ -83,10 +83,10 @@
                       <div class="range-filter">
                         <div class="range-controls">
                           <div class="scale">
-                            <div class="bar" style="margin-left: 20%; width: 50 %"></div>
+                            <div class="bar" style="margin-left: 20%; width: 50%"></div>
                           </div>
-                          <div class="toggle toggle-min"></div>
-                          <div class="toggle toggle-max"></div>
+                          <button type="button" class="toggle toggle-min"></button>
+                          <button type="button" class="toggle toggle-max"></button>
                         </div>
                         <div class="price-controls">
                           <label class="min-price"><input name="min-price" type="text" value="0"></label>

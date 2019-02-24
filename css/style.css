@@ -27,7 +27,7 @@ button {
   }
 
 .heder-wrap {
-    background-image: url(../img/background/top_background.svg);
+    background-color: #f4f7f9;
     width: 1280px;
     height: 320px;
 }
@@ -52,7 +52,15 @@ button {
   text-decoration: underline;
 }
 .search input {
-  background: url(../img/icon/icon-search.png) left center no-repeat;
+  background: url(../img/icon/icon-search.svg) left center no-repeat;
+  opacity: 0.3;
+}
+.search input:hover{
+  background-color: #212a3a;
+  opacity: 1;
+}
+.search input:active{
+  opacity: 0.5;
 }
 .search input {
   background-color: #293449;
@@ -142,7 +150,7 @@ button {
     line-height: 24px;
 }
 
-h1 {
+.main-title h1 {
     color: #ee3643;
     font-size: 16px;
     font-style: italic;
@@ -264,7 +272,7 @@ h1 {
 
 .product-cards h3 {
   color: #000000;
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;;
   font-size: 18px;
   font-weight: 700;
   line-height: 20px;
@@ -297,10 +305,8 @@ h1 {
 /* Блок сервисов */
 
 .container-services {
-  background-image: url("img/background/background_servis.png"); /*Почему фоновое изображение не вставляется?*/
-    background-position: top center;
-    background-color: #f4f8f9;
-    color: #000000;
+  background-color: #f4f7f9;
+  color: #000000;
 }
 .container-services h2 {
     font-size: 30px;
@@ -442,28 +448,30 @@ h1 {
   opacity: 1;
 }
 .sort-list li:nth-last-child(2) {
-  background-image: url(../img/icon/icon-up-dir-grey.png);
+  background-image: url(../img/icon/icon-up-dir-black.svg);
   height: 10px;
   width: 11px;
   margin-left: 10px;
+  opacity: 0.2;
 }
 .sort-list li:nth-last-child(1) {
-  background-image: url(../img/icon/icon-down-dir-grey.png);
+  background-image: url(../img/icon/icon-down-dir-black.svg);
   height: 10px;
   width: 11px;
   margin-left: 10px;
+  opacity: 0.2;
 }
-.sort-list li:nth-last-child(1):active{
-  background-image: url(../img/icon/icon-down-dir-red.png);
+.sort-list li:nth-last-child(1):active {
+  background-image: url(../img/icon/icon-down-dir-red.svg);
 }
 .sort-list li:nth-last-child(1):hover {
-  background-image: url(../img/icon/icon-down-dir-black.png);
+  opacity: 1;
 }
 .sort-list li:nth-last-child(2):active {
-  background-image: url(../img/icon/icon-up-dir-red.png);
+  background-image: url(../img/icon/icon-up-dir-red.svg);
   }
 .sort-list li:nth-last-child(2):hover {
-  background-image: url(../img/icon/icon-up-dir-black.png);
+  opacity: 1;
 }
 
 
@@ -632,17 +640,13 @@ form label {
   text-transform: uppercase;
 }
 /*Страницы*/
-.pages {
-  display: table;
-  border-spacing: 10px 0px;
-}
+
 .pages li {
   width: 38px;
   height: 38px;
   background-color: #ffffff;
   border: 1px solid #e5e5e5;
   text-align: center;
-  display: table-cell;
   vertical-align: middle;
   border-radius: 3px;
 }
