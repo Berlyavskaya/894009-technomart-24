@@ -1,20 +1,29 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Cuprum", Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+}
+body > * {
+  background-color: rgba(255, 230, 0, 0.384);
+}
+body > * > * {
+  background-color: rgba(51, 255, 0, 0.473);
+}
+body > * > * > * {
+  background-color: rgba(17, 0, 255, 0.473);
 }
 a {
     text-decoration: none;
 }
 button {
-    padding: 0;
-    border: none;
-    font: inherit;
-    color: inherit;
-    background-color: transparent;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
 }
 /* ОФОРМЛЕНИЕ */
 /* Хедер */
@@ -27,22 +36,50 @@ button {
   }
 
 .heder-wrap {
-    background-color: #f4f7f9;
-    width: 1280px;
-    height: 320px;
+  background-color: #f4f7f9;
+  padding-bottom: 60px;
+  flex-direction: column;
+}  
+.heder-wrap,
+.middle-header,
+.lower-header { 
+  display: flex;
+  background-color: #f4f7f9;
+}
+.middle-header {
+  min-height: 158px;
+  align-items: center;
+}
+.lower-header {
+  min-height: 60px;
+  width: 833px;
+  margin: 0 auto;
+}
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 130px;
+  justify-content: space-between;
 }
 .upper-header {
-    background-color: #293449;
+  background-color: #293449;
+  width: 100%;
+}
+.upper-header, .container {
+  display: flex;
+}
+.search{
+  margin-left: auto;
 }
 .upper-header a {
-    color: #ffffff;
+  color: #ffffff;
 }
 .up-link {
-    width: 150px;
-    height: 42px;
+  width: 150px;
+  height: 42px;
 }
 .up-link:active {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 .catalog-user-navigation a {
   color: #32425c;
@@ -52,9 +89,12 @@ button {
   text-decoration: underline;
 }
 .search input {
-  background: url(../img/icon/icon-search.svg) left center no-repeat;
-  opacity: 0.3;
+  background: url(../img/icon/icon-search.svg) 17px center no-repeat;
 }
+.search .colortext::-webkit-input-placeholder { 
+  color: #ffffff; 
+}
+
 .search input:hover{
   background-color: #212a3a;
   opacity: 1;
@@ -71,6 +111,47 @@ button {
   font-size: 17px;
   font-weight: 400;
   line-height: 18px;
+}
+.container-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: 
+}
+.container-link .bookmark,
+.container-link .cart,
+.container-link .checkout{
+  align-items: center;
+  padding-top: 13px;
+  margin-bottom: -13px;
+ 
+   
+  font-size: 17px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.06;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+.container-link .bookmark{
+  background-image: url(../img/icon/icon-bookmark.svg);
+  background-position: left 13px;
+  background-repeat: no-repeat;
+  padding-left: 27px;
+  width: 124px;
+}
+.container-link .cart {
+  background-image: url(../img/icon/icon-cart.svg);
+  background-position: left 13px;
+  background-repeat: no-repeat;
+  padding-left: 31px;
+  width: 102px;
+}
+.container-link .checkout {
+  width: 130px;
+  padding-left: 20px;
 }
 .user-form {
   width: 299px;
@@ -128,57 +209,116 @@ button {
     box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
     background-color: #ee3643;
 }
+.main-logo-box img{
+  padding-top: 13px;
+  padding-left: 55px;
+}
 .main-logo-box:hover{
     background-color: #ca2c37;
 }
 .main-logo-box:active{
     background-color:#ba2732;
 }
-
+.contacts-header {
+  width: 270px;
+  margin-right: auto;
+  
+}
 .contacts-header a {
-    width: 144px;
-    height: 21px;
-    color: #ee3643;
-    font-size: 21px;
-    font-weight: 400;
-    line-height: 21px;
+  display: block;
+  padding-top: 13px;
+  padding-left: 74px;
+  width: 196px;
+  height: 32px;
+
+  color: #ee3643;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 21px;
+
+  border: 2px solid #ffffff;
+
+  background-image: url(../img/icon/icon-phone.svg);
+  background-position: 15px center;
+  background-repeat: no-repeat;
 }
 .contacts-header span {
-    color: #32425c;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
+  color: #32425c;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  padding-left: 10px;
 }
 
 .main-title h1 {
-    color: #ee3643;
-    font-size: 16px;
-    font-style: italic;
-    line-height: 23px;
+  color: #ee3643;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 23px;
+  width: 205px;
+  padding-right: 71px;
+  padding-left: 53px;
+  }
+.user-navigation li {
+  display: inline-block;
 }
 .user-navigation a {
-    color: #000000;
-    font-size: 21px;
-    font-weight: 400;
-    line-height: 21px;
+  color: #000000;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 21px;
+  background-color: #ffffff;
+}
+.login-link {
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 27px;
+  padding-left: 48px;
+  background-image: url(../img/icon/icon-login-1.svg); /* добавить прозрачность*/
+  background-position: 14px center;
+  background-repeat: no-repeat;
+}
+.check-in-link {
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 25px;
+  padding-left: 25px;
 }
 /* Меню в хедере */
+.lower-header ul {
+  display: flex;
+  min-width: 60px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .lower-header {
-    background-color: #32425c;
-    box-shadow: inset 0 -5px 0 #293449;
+  background-color: #32425c;
+  box-shadow: inset 0 -5px 0 #293449;
+  padding-left: 52px;
+  padding-right: 55px;
+}
+.lower-header li:nth-child(-n+6) {
+  margin-right: 60px;
 }
 .lower-header a {
-    color: #ffffff;
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 17px;
+  display: block;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 17px;
+  
 }
+
 .lower-header a:active{
-    background-color: #1d2739;
-    opacity: 0.5;
+  background-color: #1d2739;
+  opacity: 0.5;
 }
 .lower-header a:hover{
-    background-color: #1d2739;
+  background-color: #1d2739;
 }
 
 /* Главный раздел */
