@@ -43,6 +43,7 @@ button {
 .heder-wrap,
 .container { 
   display: flex;
+  flex-wrap: wrap;
   /*  border: 2px solid black;*/
 }
 .heder-wrap {
@@ -55,6 +56,7 @@ button {
   width: 940px;
   margin: auto;
   flex-direction: row;
+  
 }
 .upper-header{
   min-height: 42px;
@@ -95,62 +97,80 @@ header .logo {
   width: 110px;
   height: 18px;
 }
-header .wrap-logo-box:hover{
+header .logo-box:hover{
   background-color: #ca2c37;
 }
-header .wrap-logo-box:active{
+header .logo-box:active{
   background-color:#ba2732;
 }
 /*Поле поиска*/
-.search{
+.search {
+  position: relative;
   margin-left: 220px;
 }
-.search input::-webkit-input-placeholder { 
-  color:#ffffff;
-  font-size: 17px;
-  line-height: 1.06;
-}
-.search input::-moz-placeholder { 
-  color:#ffffff;
-  font-size: 17px;
-  line-height: 1.06;
-}/* Firefox 19+ */
-.search input:-moz-placeholder { 
-  color:#ffffff;
-  font-size: 17px;
-  line-height: 1.06;
-}/* Firefox 18- */
-.search input:-ms-input-placeholder { 
-  color:#ffffff;
-  font-size: 17px;
-  line-height: 1.06;
-}
 
-.search input {
-  background-color: #293449;
+.header-search {
   width: 270px;
   height: 42px;
+  padding-left: 50px;
+  vertical-align: middle;
+  background-color: #293449;
   border: none;
   color: #ffffff;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 18px;
 }
-.search input::before {
-  content: "1234";
-  background-color: #ff0000;
-  width: 17px;
-  height: 17px;
-  background: url(../img/icon/icon-search.svg) center center no-repeat; 
-  opacity: 0.3;
-}
-.search input:hover{
+
+.header-search:hover {
   background-color: #212a3a;
-  opacity: 1;
 }
-.search input:active{
+
+.header-search:focus {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.icon-search {
+  position: absolute;
+  top: 12px;
+  left: 17px;
   opacity: 0.5;
 }
+
+input[type="search"]:hover ~ .icon-search {
+  opacity: 1;
+}
+
+input[type="search"]:focus ~ .icon-search {
+  z-index: 10;
+  opacity: 1;
+}
+
+input[type="search"]:focus ~ .icon-search > path {
+  fill: #ee3643;
+}
+
+input[type="search"]::-webkit-input-placeholder { 
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff; 
+}
+
+input[type="search"]:-ms-input-placeholder { 
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff; 
+}
+input[type="search"]::-ms-input-placeholder { 
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff; 
+}
+
+input[type="search"]::placeholder { 
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff; 
+}
+
 .catalog-user-navigation a {
   color: #32425c;
   font-size: 16px;
@@ -166,6 +186,7 @@ header .wrap-logo-box:active{
   margin-left: auto;
 }
 .up-link {
+  position: relative;
   box-sizing: border-box;
   min-height: 42px;
   font-size: 17px;
@@ -176,19 +197,39 @@ header .wrap-logo-box:active{
   flex-grow: 1;
   min-width: 150px;
 }
-.container-link .bookmark{
-  background-image: url(../img/icon/icon-bookmark.svg);
-  background-position: 17px 13px;
-  background-repeat: no-repeat;
+.container-link .bookmark {
   padding-left: 44px;
-  width: 124px;
 }
 .container-link .cart {
-  background-image: url(../img/icon/icon-cart.svg);
-  background-position: 18px 13px;
-  background-repeat: no-repeat;
   padding-left: 50px;
-  width: 102px;
+}
+.container-link .bookmark::before{
+  content: "";
+  position: absolute;
+  background-image: url(../img/icon/icon-bookmark.svg);
+  width: 14px;
+  height: 16px;
+  left: 13px;
+  opacity: 0.3;
+}
+
+
+.container-link .cart::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/icon/icon-cart.svg);
+  width: 15px;
+  height: 15px;
+  left: 17px;
+  opacity: 0.3;
+}
+.container-link .bookmark:hover::before,
+.container-link .cart:hover::before {
+  opacity: 1;
+}
+.container-link .bookmark:active::before,
+.container-link .cart:active::before {
+  opacity: 0.5;
 }
 .container-link .bookmark:hover,
 .container-link .cart:hover {
@@ -197,7 +238,8 @@ header .wrap-logo-box:active{
 .container-link .bookmark:active,
 .container-link .cart:active {
   background-color: #161d29;
-  opacity: 0.5;
+  color: rgba(255, 255, 255, 0.6  );
+
 }
 
 /* Оформить заказ */
@@ -317,13 +359,13 @@ header .wrap-logo-box:active{
 }
 /* Меню в хедере */
 .lower-header {
-  height: 60px;
+  min-height: 60px;
 }
 .lower-header ul {
   box-shadow: inset 0px -5px 0 0 #293449;
   background-color: #32425c;
   justify-content: space-between;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   flex-shrink: 1;
   padding-left: 20px;
   padding-right: 20px;
@@ -364,6 +406,15 @@ header .wrap-logo-box:active{
   color: #000000;
   
 }
+.user-form a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #000000;
+}
 .user-form .user-profile {
   background-image: url(../img/icon/icon-user.svg);
   background-position: center;
@@ -378,21 +429,18 @@ header .wrap-logo-box:active{
   width: 100%;
   height: 45px;
   padding-top: 11px;
+  color: #000000;
 }
-.user-link span {
-  font-size: 21px;
-  font-weight: 400;
-  line-height: 21px;
-}
-
 .user-form .exit-profile {
   background-image: url(../img/icon/icon-logout.svg);
   background-position: center;
   background-repeat: no-repeat;
   min-width: 20px;
-  min-height: 17px;
+  min-height: 18px;
   opacity: 0.3;
   margin-right: 10px;
+  margin-left: 13px;  
+
 }
 .catalog-user-navigation {
   text-align: left;
@@ -559,6 +607,7 @@ main .popular-offers {
 }
 .product-cards {
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   border: 1px solid #e5e5e5;
@@ -567,10 +616,74 @@ main .popular-offers {
   height: 318px;
   margin-bottom: 20px;
 }
+
+
 .catalog .product-cards {
   margin-top: 0px;
   
 }
+.product-cards .flag {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+
+  width: 60px;
+  height: 60px;
+
+  text-indent: -1000px;
+  overflow: hidden;
+  z-index: 20;
+}
+.product-cards .flag-new {
+  background: url("../img/icon/popular-offers/new_flag.png") no-repeat 0 0;
+}
+.product-cards .actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 218px;
+  height: 88px;
+  padding: 40px 0;
+
+  background-color: rgba(255,255,255,0.9);
+  z-index: 10;
+}
+.product-cards .actions .buy,
+.product-cards .actions .bookmark {
+  display: block;
+  width: 129px;
+  margin: 0 auto;
+  margin-bottom: 7px;
+  padding: 7px 0;
+
+  background-color: #63a63e;
+  border: 3px solid #63a63e;
+  border-bottom-color: #367315;
+  border-radius:3px;
+
+  color: white;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "Cuprum", sans-serif;
+  line-height: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+.product-cards .actions .bookmark {
+  color: #32425c;
+  background: white;
+  border-bottom-color: #63a63e;
+}
+.product-cards .actions {
+  display: none;
+}
+
+.product-cards:hover .actions {
+  display: block;
+}
+
 .product-cards h3 {
   color: #000000;
   font-family: "PT Sans", Arial, Helvetica, sans-serif;;
@@ -1376,55 +1489,44 @@ footer .wrap-logo-box{
   margin-top: 40px;
 }
 .social-network {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
   margin: 0px;
   padding: 0px;
   margin-top: 45px;
   margin-left: 155px;
-  width: px;
+  width: 134px;
   padding: 0px;
 }
 .social-network li{
-  margin-right: 3px;
-  display: inline-block;
-  vertical-align: middle;
+  
   background-color: #212a3a;
   border-radius: 50%;
-  width: 41px;
   height: 42px;
 }
-/*Почему картинки не вставляются??*/
+
+.social-network a {
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 42px;
+  height: 42px;
+}
 .social-vk {
-  display: inherit;
   background: url(../img/icon/vk-icon.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 41px;
-  height: 42px;
-
-
 }
-.social-fb {
-  display: inherit;
-  background-image: url(../img/icon/fb-icon.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 41px;
-  height: 42px;
 
+.social-fb {
+  background-image: url(../img/icon/fb-icon.svg);
 }
 .social-inst {
-  display: inherit;
   background-image: url(../img/icon/insta-icon.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 41px;
-  height: 42px;
-
 }
 .social-network li:active,
 .social-network li:hover {
   background-color: #ee3643;
+  transition: 1s all;
 }
 .lower-footer p:nth-child(3) {
   font-size: 16px;
