@@ -66,42 +66,60 @@
     <main class="main-container">
       <section class="popular-offers">
         <h2 class="visually-hidden">Популярные разделы сайта</h2> 
-        <div class="offer-container ">
-          <div class="materials offer-cards">
-            <span class="headline">Материалы</span>
-            <img src="img/icon/popular-offers/mat.svg" width="87" height="96" alt="">
-            <a href="#" class="button">На любой вкус</a>
-          </div>
+        <div class="offer-container ">         
           <div class="instruments offer-cards">
             <span class="headline">Инструмент</span>
-            <img src="img/icon/popular-offers/instr.svg" width="75" height="61" alt="">
+            <div class="offer-icon"></div>
+            <!-- <img src="img/icon/popular-offers/instr.svg" width="75" height="61" alt=""> -->
             <a href="#" class="button">На все случаи</a>
           </div>
           <div class="eqipments offer-cards">
             <span class="headline">Техника</span>
-            <img src="img/icon/popular-offers/tech.svg" width="78" height="62" alt="">
+            <div class="offer-icon"></div>
+            <!-- <img src="img/icon/popular-offers/tech.svg" width="78" height="62" alt=""> -->
             <a href="#" class="button">Для стройки</a>
           </div>
-          <div class="drills slider-wrap">
-            <span class="headline">Дрели</span>
-            <span class="subtitle">Соседям на радость!</span>
-            <a href="catalog.html" class="button-red button">Открыть каталог</a>
-            <div id="slider">
-              <div class="slide"><img src="img/content/slider-1/Layer_99_.jpg" width="620" height="266" alt="Рабочий сверлит стену дрелью"></div>
-              <div class="slide"><img src="img/content/slider-2/2-layers_.png" width="620" height="266" alt="Рабочий сверлит стену перфоратором"></div>
+          <div class="materials offer-cards">
+              <div class="flag flag-new">Новинка</div>
+            <span class="headline">Материалы</span>
+            <div class="offer-icon"></div>
+            <!-- <img src="img/icon/popular-offers/mat.svg" width="87" height="96" alt=""> -->
+            <a href="#" class="button">На любой вкус</a>
+          </div>
+          <div class="slider-wrap">
+            <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+            <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+            <div class="slider-controls">
+              <label class="slider-controls-item slider-controls-item--1" for="product-1">Первый</label>
+              <label class="slider-controls-item slider-controls-item--2" for="product-2">Второй</label>
             </div>
+            <ul id="slider-list">
+              <li class="slide">                
+                <span class="headline">Дрели</span>
+                <span class="subtitle">Соседям на радость!</span>               
+                <a href="catalog.html" class="button-red button">Открыть каталог</a>
+                
+              </li>
+              <li class="slide">
+                <span class="headline">Перфораторы</span>
+                <span class="subtitle">Настоящие мужские игрушки</span>                 
+                <a href="catalog.html" class="button-red button">Открыть каталог</a>
+                
+              </li>
+            </ul>            
           </div>
           <div class="sale offer-cards">
             <span class="headline">Скидка 50%</span>
-            <img src="img/icon/popular-offers/sale.svg" width="59" height="72" alt="">
+            <div class="offer-icon"></div>
+            <!-- <img src="img/icon/popular-offers/sale.svg" width="59" height="72" alt=""> -->
             <a href="#" class="button">На 350 товаров</a>
           </div>
           <div class="delivery offer-cards">
             <span class="headline">Доставка</span>
-            <img src="img/icon/popular-offers/tech.svg" width="78" height="63" alt="">
+            <div class="offer-icon"></div>
+            <!-- <img src="img/icon/popular-offers/tech.svg" width="78" height="63" alt=""> -->
             <a href="#" class="button">Бесплатно</a>
           </div>
-        </div>
       </section>
       <section class="popular-products">
         <div class="container-title">
@@ -169,42 +187,42 @@
         </ul>
       </section>
       <section class="services">
-        <div class="container-services">
-          <div class="headline-services">
-            <h2>Сервисы</h2>
-            <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
-              Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+          <div class="container-services">
+            <div class="headline-services">
+              <h2>Сервисы</h2>
+              <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
+                Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+            </div>
+            <div class="slider-services">         
+              <ul class="list-services-name">
+                <li> <button type="button">Доставка</button></li> 
+                <li><button type="button">Гарантия</button></li> 
+                <li><button type="button">Кредит</button></li> 
+              </ul>
+              <ul class="list-services-content">
+                <li class="description-services">
+                  <h3>Доставка</h3>
+                  <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
+                    Ведь мы неплохо заработаем,<br>поднимае его на ваш этаж!
+                  </p>
+                </li>
+                 <li class="description-services">
+                  <h3>Гарантия</h3>
+                  <p>Если купленный у нас товар поломается или заискрит, 
+                    а также в случае пожара, спровоцированного его возгаранием,
+                    вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. 
+                    <br>Дом уж восстановите как-нибудь сами.
+                  </p>
+                </li>
+                  <li class="description-services">
+                  <h3>Кредит</h3>
+                  <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
+                  <a href="#" class="button-red button">Отправить заявку</a>
+                </li> 
+              </ul>
+            </div>
           </div>
-          <div class="slider-services">         
-            <ul class="list-services-name">
-              <li> <button type="button">Доставка</button></li> 
-              <li><button type="button">Гарантия</button></li> 
-              <li><button type="button">Кредит</button></li> 
-            </ul>
-            <ul class="list-services-content">
-              <li class="description-services-delivery">
-                <h3>Доставка</h3>
-                <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-                  Ведь мы неплохо заработаем,<br>поднимае его на ваш этаж!
-                </p>
-              </li>
-              <!-- <li class="description-services-garantee">
-                <h3>Гарантия</h3>
-                <p>Если купленный у нас товар поломается или заискрит, 
-                  а также в случае пожара, спровоцированного его возгаранием,
-                  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. 
-                  Дом уж восстановите как-нибудь сами.
-                </p>
-              </li>
-              <li class="description-services-credit">
-                <h3>Кредит</h3>
-                <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
-                <a href="#" class="button-red button">Отправить заявку</a>
-              </li> -->
-            </ul>
-          </div>
-        </div>
-      </section>
+        </section>
       <section class="about-company">
         <div class="container-about-company">
           <h2 class="headline">Компания «Техномарт»</h2>
@@ -229,29 +247,29 @@
           </p>
           <a href="#"><img class="map" src="img/content/map_min.jpg" width="300" height="158" alt="Карта офиса по адреу: г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8"></a>
           <a href="#" class="button-red button">Заблудились? Напишите нам!</a>
-          <!-- <section class="modal write-us">
+          <section class="modal-write-us">
             <h2 class="visually-hidden">Форма отправки письма</h2>
             <form class="write-us" action="https://echo.htmlacademy.ru" method="post">
-              <p class="write-us-item">
+              <p>
                 <label for="write-name">Ваше имя:</label>
                 <input id="write-name" type="text" name="name" value="" placeholder="Имя Фамилия">
               </p>
-              <p class="write-us-item">
+              <p>
                 <label for="write-e-mail">Ваш e-mail:</label>
                 <input id="write-e-mail" type="text" name="e-mail_adress" value="" placeholder="email@example.com">
               </p>
-              <p class="write-us-item"> 
+              <p> 
                 <label for="write-letter">Текст письма:</label>
                 <input id="write-letter" type="text" name="text_of_the_letter" value="" placeholder="В свободной форме">
-              </p>
-              <button class="button-red button" type="submit">Отправить</button>
-              <button class="modal-close" type="button" aria-label="Закрыть форму отправки письма"></button>
+              </p>            
+                <button class="button-red button" type="submit">Отправить</button>
+                <button class="modal-close" type="button" aria-label="Закрыть форму отправки письма"></button>           
             </form>
-          </section> -->
-          <!-- <section class="modal map">
-            <img src="img/content/map_max.jpg" width="940" height="447" alt="Карта офиса по адреу: г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8">
+          </section> 
+          <section class="modal-map">
+            <img src="img/content/map_max.jpg" width="940" height="446" alt="Карта офиса по адреу: г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8">
             <button class="modal-close" type="button" aria-label="Закрыть карту"></button>
-          </section> -->
+          </section> 
         </div>
       </section>
     </main>
