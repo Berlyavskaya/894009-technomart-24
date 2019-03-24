@@ -306,9 +306,6 @@ input[type="search"]::placeholder {
 
 .middle-header .container  {
   min-height: 158px;
-  -webkit-box-align: top;
-      -ms-flex-align: top;
-          align-items: top;
   padding-top: 46px;
 }
 .main-title {
@@ -681,7 +678,7 @@ main .popular-offers {
 .slider-wrap {
   position: relative;
   background-color: #36731571;
-  display: flepx;
+  display: flex;
   height: 266px;
   width: 620px;
   
