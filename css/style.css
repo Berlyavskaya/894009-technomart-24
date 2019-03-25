@@ -9,7 +9,6 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 * {
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
@@ -522,6 +521,8 @@ main .popular-offers {
   font-size: 0;
 }
 .offer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   width: inherit;
@@ -530,19 +531,37 @@ main .popular-offers {
   padding: 0;
 }
 .col-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: space-between;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 620px;
 }
 .col-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
   width: 320px;
 }
 .offer-cards {
@@ -648,6 +667,8 @@ main .popular-offers {
 .slider-wrap {
   position: relative;
   background-color: #36731571;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 266px;
   width: 620px;
@@ -857,7 +878,6 @@ main .popular-offers {
   height: 158px;
   padding: 40px 0;
   background-color: rgba(255, 255, 255);
-  z-index: 10;
 }
 .product-cards .actions .buy,
 .product-cards .actions .bookmark {
@@ -888,7 +908,7 @@ main .popular-offers {
   display: none;
 }
 .product-cards:hover .actions {
-  display: block;
+  display: inline-block;
 }
 .product-cards .buy:hover {
   background-color: #5fbb2d;
@@ -931,7 +951,8 @@ main .popular-offers {
   min-height: 35px;
 }
 .product-price-new {
-  color: #000000;
+  position: relative;
+  color: #ffffff;
   -ms-flex-item-align: start;
   align-self: flex-start;
   margin-left: 43px;
@@ -945,9 +966,17 @@ main .popular-offers {
   width: 141px;
   min-height: 38px;
   padding-top: 10px;
-  -webkit-clip-path: polygon(88% 0%, 100% 50%, 88% 100%, 0% 100%, 0 50%, 0% 0%);
-  clip-path: polygon(88% 0%, 100% 50%, 88% 100%, 0% 100%, 0 50%, 0% 0%);
   margin-bottom: 20px;
+}
+.product-price-new:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 0;
+  height: 0;
+  border: 19px solid white;
+  border-left-color: #ee3643;
 }
 /* Блок популярных производителей */
 .manufacturer {
@@ -1694,9 +1723,13 @@ input[type="checkbox"] {
 .manufacturer-filter li {
   padding: 0;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   width: 220px;
   height: 40px;
   text-align: left;
@@ -2011,8 +2044,10 @@ footer .wrap {
   min-height: 193px;
 }
 footer .adress {
-  display: inline-block;
+  display: block;
   width: 330px;
+  text-decoration: none;
+  list-style-type: none;
   font-family: "Cuprum", Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: normal;
@@ -2021,7 +2056,8 @@ footer .adress {
   letter-spacing: normal;
   line-height: 24px;
   color: #f3f7f9;
-  padding-left: 3px;
+  padding-left: 2px;
+  margin-left:0px;
   margin: 0;
   
 }
@@ -2033,7 +2069,7 @@ footer .adress {
 footer .wrap-logo-box {
   -ms-flex-preferred-size: 220px;
   flex-basis: 220px;
-  margin-bottom: 13px;
+  margin-bottom: 29px;
 }
 footer .logo-box {
   display: inline-block;
