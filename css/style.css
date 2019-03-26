@@ -877,7 +877,7 @@ main .popular-offers {
   width: 218px;
   height: 158px;
   padding: 40px 0;
-  background-color: rgba(255, 255, 255);
+  background-color: rgb(255, 255, 255);
 }
 .product-cards .actions .buy,
 .product-cards .actions .bookmark {
@@ -908,7 +908,7 @@ main .popular-offers {
   display: none;
 }
 .product-cards:hover .actions {
-  display: inline-block;
+  display: block;
 }
 .product-cards .buy:hover {
   background-color: #5fbb2d;
