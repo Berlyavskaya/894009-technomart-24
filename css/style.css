@@ -19,7 +19,7 @@ a {
 section .h2 {
   background-color: inherit;
 }
-button {
+.button {
   padding: 0;
   border: none;
   font: inherit;
@@ -128,12 +128,17 @@ header .logo-box:active {
 .search {
   position: relative;
   margin-left: 220px;
+  font-size: 17px;
 }
 .header-search {
   width: 270px;
   height: 42px;
+  line-height: 42px;
+  font-size: 17px;
+  font-family: "Cuprum", Arial, Helvetica, sans-serif;
   padding-left: 50px;
-  vertical-align: middle;
+  padding-top: 11px;
+  padding-bottom: 11px;
   background-color: #293449;
   border: none;
   color: #ffffff;
@@ -495,7 +500,8 @@ input[type="search"]::placeholder {
 }
 /* Главный раздел */
 /* Блок популярных предложений */
-main {
+.catalog-container,
+.main-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -774,8 +780,32 @@ main .popular-offers {
   left: 25px;
   background-image: url(../img/icon/icon-left.svg);
 }
-.slider-wrap .button-red,
-.button-red {
+.slider-indicate {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 220px;
+  left: 295px;
+  min-width: 30px;
+  height: 10px;
+  z-index: 10;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.slider-indicate-item {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  z-index: 10;
+}
+.slider-indicate .current {
+  background-color: #ee3643;
+  border: 2px solid #ffffff;
+} 
+
+.slider-wrap .button-red, .button-red {
   background-color: #ee3643;
 }
 .slider-wrap .button-red:hover {
@@ -1121,6 +1151,7 @@ main .popular-offers {
   height: 61px;
   text-align: left;
   text-indent: 20px;
+  border: none;
 }
 .slider-services button:hover {
   background-color: #293449;
@@ -1821,7 +1852,7 @@ input[type="radio"]:checked + label span {
 input[type="radio"]:checked:hover + label span {
   background: url(../img/icon/radio-on_2.png) no-repeat;
 }
-form label {
+.filter label {
   font-family: "PT Sans", Arial, Helvetica, sans-serif;
   font-size: 15px;
   font-weight: 400;
@@ -2007,7 +2038,7 @@ form label {
   display: none;
 }
 /* Футер общий*/
-footer {
+.footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
