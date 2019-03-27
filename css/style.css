@@ -1128,16 +1128,17 @@ main .popular-offers {
   flex-wrap: wrap;
   padding-top: 45px;
   width: 241px;
-}
+  }
 .list-services-name::after {
   content: "";
   background-image: url("../img/icon/layer-118-copy.png");
-  background-position: left top;
+  background-position: right center;
   width: 10px;
   height: 279px;
-  position: relative;
-  top: -52%;
-  left: 231px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
 }
 .list-services-name button {
   color: #ffffff;
@@ -1375,12 +1376,15 @@ main .popular-offers {
   -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
   background-color: #ffffff;
-  border-bottom: 114px solid #f8f3f0;
+  box-sizing: border-box;
+  border-bottom: 114px solid #f4f4f4;
   border-top: 7px solid #ee3643;
   width: 620px;
   height: 430px;
   display: none;
   z-index: 20;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 .modal-write-us form {
   display: -webkit-box;
@@ -1390,18 +1394,22 @@ main .popular-offers {
   flex-wrap: wrap;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
-  justify-content: flex-start;
+  justify-content: space-between;
   -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-flex-line-pack: start;
   align-content: flex-start;
-  margin-left: 80px;
   width: 460px;
   height: 430px;
+  margin: 0;
+  padding: 0;
 }
 .write-us label {
   font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
   line-height: 1;
   letter-spacing: normal;
   text-align: left;
@@ -1414,11 +1422,10 @@ main .popular-offers {
   text-indent: 16px;
   border: solid 2px #dee3e4;
   background-color: #ffffff;
+  margin: 0;
 }
-.write-us .write-us-item:nth-child(1) {
-  margin-right: 20px;
-}
-.write-us #write-letter {
+
+.write-us .write-letter {
   min-width: 460px;
   height: 114px;
   padding-bottom: 83px;
@@ -1432,20 +1439,29 @@ main .popular-offers {
 .modal-write-us p:nth-child(2) {
   margin-top: 48px;
   margin-bottom: 20px;
+  width: 220px;
 }
 .modal-write-us p:nth-child(3) {
-  margin-bottom: 74px;
+  margin-bottom: 78px;
 }
 .modal-write-us .modal-close {
+  background: url(../img/icon/icon-modal-close.svg) no-repeat center;
+  margin: 0;
+  border: none;
   position: absolute;
   top: 9px;
   right: 7px;
+  width: 21px;
+  height: 21px;
   cursor: pointer;
+  z-index: 20;
 }
 .modal-write-us .button {
   width: 460px;
   border-radius: 3px;
   padding-bottom: 10px;
+  margin-bottom: 0;
+  cursor: pointer;
 }
 /* Доп карта */
 .modal-map {
@@ -1463,10 +1479,16 @@ main .popular-offers {
   display: none;
 }
 .modal-map .modal-close {
+  background: url(../img/icon/icon-modal-close.svg) no-repeat center;
+  margin: 0;
   position: absolute;
   top: 9px;
   right: 9px;
   cursor: pointer;
+  border: none;
+  width: 21px;
+  height: 21px;
+  z-index: 20;
 }
 /*Страница каталога*/
 .catalog-wrap {
@@ -1546,7 +1568,9 @@ main .popular-offers {
 }
 .breadcrumbs {
   position: relative;
-  
+  height: 59px;
+  list-style: none;
+  flex-direction: row;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -1554,7 +1578,7 @@ main .popular-offers {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-right: 602px;
+  padding-right: 583px;
   padding-left: 55px;
 }
 .breadcrumbs::before {
@@ -1569,6 +1593,7 @@ main .popular-offers {
 }
 .breadcrumbs li {
   position: relative;
+  display: inline-block;
 }
 .breadcrumbs li::before {
   content: "";
@@ -1935,15 +1960,16 @@ input[type="radio"]:checked:hover + label span {
 }
 .theory-container h4 {
   display: inline-block;
-  font-size: 30px;
-  font-weight: 400;
+  font-family:"Cuprum", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal;
   line-height: 30px;
+  font-size: 30px;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
-  margin-top: 63px;
+  margin-top: 65px;
   margin-bottom: 30px;
-  letter-spacing: -2.5px;
 }
 .theory p {
   line-height: 24px;
@@ -1974,10 +2000,14 @@ input[type="radio"]:checked:hover + label span {
   z-index: 15;
 }
 .card-message .modal-close {
-  background: url(../img/icon/icon-modal-close.svg) no-repeat;
+  background: url(../img/icon/icon-modal-close.svg) no-repeat center;
+  margin: 0;
   position: absolute;
-  top: 9px;
-  right: -190px;
+  width: 21px;
+  height: 21px;
+  top: 16px;
+  right: 9px;
+  border: none;
   cursor: pointer;
 }
 .card-message .modal-wrap {
@@ -1994,7 +2024,7 @@ input[type="radio"]:checked:hover + label span {
   -webkit-box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75);
   box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75);
   border-bottom: 112px solid #f7f3ec;
-  border-top: 7px solid #ee3643;
+  border-top: 7px solid #ee3643; 
 }
 .card-message .message {
   font-size: 30px;
@@ -2013,7 +2043,7 @@ input[type="radio"]:checked:hover + label span {
   background-image: url(../img/icon/goods-in-cart.svg);
   background-repeat: no-repeat;
   position: absolute;
-  top: 48px;
+  top: 55px;
   left: 81px;
   width: 66px;
   height: 66px;
@@ -2023,8 +2053,10 @@ input[type="radio"]:checked:hover + label span {
   height: 38px;
   margin: 0;
   background-color: #ffffff;
+  cursor: pointer;
 }
 .card-message .button-red {
+  border: none;
   margin-right: 20px;
 }
 .card-message a {
