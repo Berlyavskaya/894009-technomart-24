@@ -224,6 +224,7 @@ input[type="search"]::placeholder {
 .container-link .cart {
   padding-left: 50px;
 }
+
 .container-link .bookmark::before {
   content: "";
   position: absolute;
@@ -258,6 +259,9 @@ input[type="search"]::placeholder {
 .container-link .cart:active {
   background-color: #161d29;
   color: rgba(255, 255, 255, 0.6);
+}
+.container-link .cart-full {
+  background-color: #ee3643;
 }
 /* Оформить заказ */
 .container-link .checkout {
@@ -377,8 +381,10 @@ input[type="search"]::placeholder {
 .check-in-link {
   text-align: center;
 }
-.user-navigation a:hover {
+.user-navigation a:hover, 
+.login-link:hover::before {
   color: #ee3643;
+  opacity: 1;
 }
 .user-navigation a:active {
   color: rgba(0, 0, 0, 0.3);
@@ -498,6 +504,13 @@ input[type="search"]::placeholder {
   background-color: #32425c;
   border-radius: 4px;
 }
+.user-form:hover > li {
+  opacity: 1;
+}
+.user-form:active > li {
+  opacity: 0.3;
+}
+
 /* Главный раздел */
 /* Блок популярных предложений */
 .catalog-container,
@@ -1037,6 +1050,9 @@ main .popular-offers {
   align-items: center;
   border: solid 1px rgb(234, 234, 234);
 }
+.manufacturer li:nth-child(-n+4) {
+  margin-bottom: 20px;
+}
 .manufacturer li:hover {
   -webkit-box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
   box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
@@ -1153,11 +1169,12 @@ main .popular-offers {
   text-align: left;
   text-indent: 20px;
   border: none;
+  cursor: pointer;
 }
 .slider-services button:hover {
   background-color: #293449;
 }
-.slider-services button:focus {
+.list-services-name .current {
   -webkit-box-shadow: 0 1px 0 #ffffff, inset 0 1px 0 #ffffff;
   box-shadow: 0 1px 0 #ffffff, inset 0 1px 0 #ffffff;
   background-color: #ffffff;
@@ -1624,6 +1641,7 @@ main .popular-offers {
   background-color: #f7f3ec;
 }
 .sort-list {
+  position: relative;
   width: 460px;
   float: right;
   margin: 0;
@@ -1631,11 +1649,14 @@ main .popular-offers {
 }
 .sort-list a {
   color: #999999;
-  border-bottom: 1px dotted #ee3643;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color:#ee3643;
 }
 .sort-list li,
 .sort span {
   display: inline-block;
+  vertical-align: middle;
 }
 .sort-list li:nth-child(1) {
   margin-right: 70px;
@@ -1643,42 +1664,44 @@ main .popular-offers {
 .sort-list li:nth-child(2) {
   margin-right: 65px;
 }
-.sort-list a:hover,
-.sort-list a:focus {
-  opacity: 1;
-  border-bottom: 1px solid #ee3643;
-}
-.sort-list a:active {
-  color: #ee3643;
-  opacity: 1;
-  border-bottom: none;
-}
-.sort-list li:nth-last-child(2) {
-  background-image: url(../img/icon/icon-up-dir-black.svg);
-  height: 10px;
-  width: 11px;
-  margin-left: 46px;
+.arrow-up a {
+  position: absolute;
+  width: 5px; 
+  height: 5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid #000000;
+  right: 49px;
+  bottom: 5px;
   opacity: 0.2;
 }
-.sort-list li:nth-last-child(1) {
-  background-image: url(../img/icon/icon-down-dir-black.svg);
-  height: 10px;
-  width: 11px;
-  margin-left: 21px;
+.arrow-down a {
+  position: absolute;
+  width: 5px; 
+  height: 5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid #000000;
+  right: 21px;
+  bottom: 5px;
   opacity: 0.2;
+  
 }
-.sort-list li:nth-last-child(1):active {
-  background-image: url(../img/icon/icon-down-dir-red.svg);
+.sort-list a:hover {
+  opacity: 1;
+  color: #000000;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
 }
-.sort-list li:nth-last-child(1):hover {
+.arrow-up .current {
+  border-bottom: 10px solid #ee3643;
   opacity: 1;
 }
-.sort-list li:nth-last-child(2):active {
-  background-image: url(../img/icon/icon-up-dir-red.svg);
-}
-.sort-list li:nth-last-child(2):hover {
-  opacity: 1;
-}
+.arrow-down .current {
+  border-top: 10px solid #ee3643;
+  opacity: 1; 
+} 
+
 /*ФИЛЬТР*/
 /*Цена*/
 .filter-item {
@@ -1822,6 +1845,9 @@ input[type="checkbox"]:checked + label::before {
 input[type="checkbox"]:checked:hover + label::before {
   background: url(../img/icon/checkbox-on_2.png) no-repeat;
 }
+.manufacturer-filter label .block {
+  opacity: 0.3;
+}
 .manufacturer-filter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1937,7 +1963,7 @@ input[type="radio"]:checked:hover + label span {
   border: 1px solid #bdc6ca;
 }
 
-.pages li:active {
+.pages .current {
   border: 1px solid #ee3643;
 }
 /*Текущее состояние*/
@@ -2260,9 +2286,16 @@ footer .logo {
   margin-top: 38px;
   margin-left: 50px;
 }
-.lower-footer a:nth-last-child(1) {
+
+.feedback a,
+.developer a {
   color: #ffd180;
 }
-.lower-footer a:nth-last-child(1):hover {
+.feedback a:hover,
+.developer a:hover {
   text-decoration: underline;
+}
+.feedback a:active,
+.developer a:active {
+  color: #ee3643;
 }
